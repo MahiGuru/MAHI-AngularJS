@@ -1,0 +1,38 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="http://code.angularjs.org/angular-1.0.0rc10.min.js"></script>
+     <script type="text/javascript">
+    function AlbumCtrl($scope) {
+	   $scope.images = [
+		  {"thumbnail":"images/1.jpg", "description":"Image 01 description", 'done':false},
+		  {"thumbnail":"images/2.jpg", "description":"Image 02 description", 'done' : false},
+		  {"thumbnail":"images/3.jpg", "description":"Image 03 description", 'done' : false},
+		  {"thumbnail":"images/4.jpg", "description":"Image 04 description", 'done' : false},
+		  {"thumbnail":"images/5.jpg", "description":"Image 05 description", 'done' : false}
+	   ];
+	   
+	   
+	   
+	}
+    </script>
+  </head>
+  <body>
+    
+    <div ng-controller="AlbumCtrl">
+    {{total}}
+      <ul>
+        <li ng-repeat="image in images">
+          <img ng-src="{{image.thumbnail}}" alt="{{image.description}}">
+        </li>
+      </ul>
+    </div>
+    
+    
+    
+    
+    
+   
+    
+  </body>
+</html>
